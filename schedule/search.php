@@ -39,7 +39,6 @@ if(isset($_POST['search'])) {
 
 </head>
 <h1 style = "padding-top:200px"><font color="black"> Professor directory</font></h1>
-
 <body>
 
 

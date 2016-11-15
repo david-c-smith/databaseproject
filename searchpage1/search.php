@@ -150,7 +150,6 @@ if(isset($_POST['search'])) {
 
   <!---       END NAV        -->
 
-
   <form action="search.php" method="post">
     <div id="search">
       <input type="text" name="search" placeholder="Example: 'Dave Smith'"/>
