@@ -152,7 +152,7 @@ if(isset($_POST['search'])) {
 
 
 
-  <form action="search.php" method="post">
+  <form action="schedule.php" method="post">
     <div id="search">
       <input type="text" name="search" placeholder="Example: 'Leon Bernard'"/>
       <button type="submit"> <i class="fa fa-search"></i> </button>

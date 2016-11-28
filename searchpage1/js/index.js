@@ -4,7 +4,7 @@ var input = document.getElementById('input');
 
 function loading() {
 	search.classList.add('loading');
-	
+
 	setTimeout(function() {
 		search.classList.remove('loading');
 	}, 1500);

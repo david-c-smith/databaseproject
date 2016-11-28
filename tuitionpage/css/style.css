@@ -17,7 +17,7 @@
 }
 
 h1{
-padding-top:10px;
+font-size: 45px;
 }
 
 body {
@@ -59,7 +59,7 @@ body {
   position: relative;
   width: 400px;
 }
-.app .app-body, .app .app-footer .raised-link {
+.app .app-body, .app .app-footer {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
 }
@@ -88,14 +88,12 @@ body {
   border-top: 1px solid #EEE;
   cursor: pointer;
 }
-.app .app-row:last-child {
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-}
+
 .app .app-row .row-nr,
 .app .app-row .row-label {
   transition: color 0.3s ease;
 }
+
 .app .app-row .row-nr {
   float: left;
   position: absolute;
@@ -104,6 +102,7 @@ body {
   top: 12px;
   color: black;
 }
+
 .app .app-row .row-label {
   float: left;
   position: relative;
@@ -120,46 +119,7 @@ body {
   font-size: 22px;
   color: black;
 }
-.app .app-row .row-icon:after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 12px;
-  height: 2px;
-  : calc(50% - 1px);
-  left: -7px;
-  background-color: black;
-}
-.app .app-row.blur {
-  background-color: #FAFAFA;
-}
-.app .app-row.blur .row-nr,
-.app .app-row.blur .row-label {
-  color: black;
-}
-.app .app-row.focus {
-  background-color: #EB1319;
-  z-index: 2;
-}
-.app .app-row.focus:before {
-  content: "";
-  position: absolute;
-  background-color: #87D37C;
-  : -18px;
-  left: -18px;
-  width: 100%;
-  height: 100%;
-  border: 18px solid #87D37C;
-  border-radius: 5px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-}
-.app .app-row.focus .row-nr,
-.app .app-row.focus .row-label,
-.app .app-row.focus .row-amount,
-.app .app-row.focus .row-icon {
-  z-index: 3;
-  color: white;
-}
+
 .app .app-row.focus .row-icon:after {
   background-color: white;
 }
@@ -173,25 +133,25 @@ body {
   font-weight: 500;
   color: #757575;
 }
-.app .app-footer .flat-link {
+.app .app-footer  {
   float: left;
   color: #9E9E9E;
   margin: 10px 0;
   transition: color 0.125s ease;
 }
-.app .app-footer .flat-link:first-child {
+.app .app-footer {
   margin-right: 20px;
 }
-.app .app-footer .flat-link:hover {
+.app .app-footer  {
   color: #424242;
 }
-.app .app-footer .raised-link {
+.app .app-footer {
   float: right;
   padding: 10px 20px;
   background-color: white;
   transition: color 0.125s ease, background-color 0.125s ease;
 }
-.app .app-footer .raised-link:hover {
+.app .app-footer {
   color: white;
   background-color: #EB1319;
 }
