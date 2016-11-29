@@ -29,8 +29,8 @@
             <th scope="col">First name</th>
             <th scope="col">Last name</th>
             <th scope="col">Major</th>
-            <th scope="col">Email</th>
             <th scope="col">GPA</th>
+            <th scope="col">Email</th>
           </tr>
         </thead>
 
