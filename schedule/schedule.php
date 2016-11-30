@@ -9,7 +9,24 @@
       <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css'>
       <link rel="stylesheet" href="css/style.css">
 </head>
-<?php include_once('../navbar.html') ?>
+
+<?php include_once('../navbar.html');
+$dbhost = 'triton.towson.edu:3360';
+$dbuser = 'rfongh1';
+$dbpass = 'Cosc*wdkf';
+$dbname = 'rfongh1db';
+$conn = mysql_connect($dbhost, $dbuser, $dbpass);
+mysql_select_db($dbname);
+$query = mysql_query("SELECT * FROM SCHED WHERE sched_id = '1'");
+while($row = mysql_fetch_array($query)) {
+$start_time = $row['start_time'];
+$end_time = $row['end_time'];
+$course_name = $row['course_name'];
+$department = $row['department'];
+$course_number = $row['course_number'];
+}
+?>
+
 <body>
 <div class="cd-schedule loading">
 	<div class="timeline">
@@ -47,30 +64,28 @@
 	</div> <!-- .timeline -->
 
 	<div class="events">
+
 		<ul>
+
 			<li class="events-group">
 				<div class="top-info"><span>Monday</span></div>
-
 				<ul>
-					<li class="single-event" data-start="08:30" data-end="10:30" data-content="event-abs-circuit" data-event="event-1">
+					<li class="single-event" data-start="<?php echo $start_time?>" data-end="<?php echo $end_time?>" data-content="" data-event="event-1">
 						<a href="#0">
-							<em class="event-name">COSC 457</em>
-						</a>
-					</li>
-
-					<li class="single-event" data-start="11:00" data-end="12:30" data-content="event-rowing-workout" data-event="event-2">
-						<a href="#0">
-							<em class="event-name">COSC 129</em>
-						</a>
-					</li>
-
-					<li class="single-event" data-start="14:00" data-end="15:15"  data-content="event-yoga-1" data-event="event-3">
-						<a href="#0">
-							<em class="event-name">COSC 134</em>
+              <em class="event-name"><?php echo $department . " " .$course_number?></em>
+              <br>
+              <em class="event-name"><?php echo $course_name?></em>
 						</a>
 					</li>
 				</ul>
+
+
+
+
+
 			</li>
+
+
 
 			<li class="events-group">
 				<div class="top-info"><span>Tuesday</span></div>
@@ -81,7 +96,6 @@
 
 			<li class="events-group">
 				<div class="top-info"><span>Wednesday</span></div>
-
 
 			</li>
 
@@ -94,9 +108,14 @@
 			<li class="events-group">
 				<div class="top-info"><span>Friday</span></div>
 
-
 			</li>
+
+
+
 		</ul>
+
+
+
 	</div>
 
 	<div class="event-modal">

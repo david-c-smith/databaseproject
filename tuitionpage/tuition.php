@@ -18,9 +18,9 @@
   $conn = mysql_connect($dbhost, $dbuser, $dbpass);
   mysql_select_db($dbname);
 
-  $query1 = "SELECT account_balance FROM TUITION WHERE student_id = '1'";
-  $query2 = "SELECT pending_aid FROM TUITION WHERE student_id = '1'";
-  $query3 = "SELECT (account_balance - pending_aid) FROM TUITION WHERE student_id = '1'";
+  $query1 = "SELECT account_balance FROM TUITION WHERE student_id = '0548314'";
+  $query2 = "SELECT pending_aid FROM TUITION WHERE student_id = '0548314'";
+  $query3 = "SELECT (account_balance - pending_aid) FROM TUITION WHERE student_id = '0548314'";
 
   $result1 = mysql_query($query1);
   $result2 = mysql_query($query2);
