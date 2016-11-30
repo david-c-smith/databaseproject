@@ -8,7 +8,7 @@ $conn = mysql_connect($dbhost, $dbuser, $dbpass);
 mysql_select_db($dbname);
 $output = '';
 
-$query = mysql_query("SELECT grad_day,grad_month,grad_year FROM STUDENT WHERE student_id = '1'");
+$query = mysql_query("SELECT grad_day,grad_month,grad_year FROM STUDENT WHERE student_id = '0548314'");
 while($row = mysql_fetch_array($query)) {
   $grad_day = $row['grad_day'];
   $grad_month = $row['grad_month'];
