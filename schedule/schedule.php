@@ -1,185 +1,128 @@
-<?php
-$dbhost = 'triton.towson.edu:3360';
-$dbuser = 'rfongh1';
-$dbpass = 'Cosc*wdkf';
-$dbname = 'rfongh1db';
-$conn = mysql_connect($dbhost, $dbuser, $dbpass);
-mysql_select_db($dbname);
-$output = '';
-
-if(isset($_POST['search'])) {
-  $searchq = $_POST['search'];
-  $searchq = preg_replace("#[^0-9a-z]#i"," ",$searchq);
-  $query = mysql_query("SELECT * FROM PROFESSOR WHERE CONCAT(fname, ' ', lname) LIKE '%$searchq%'");
-  $count = mysql_num_rows($query);
-  if($count == 0) {
-    $output = "No search results";
-  } else {
-    while($row = mysql_fetch_array($query)) {
-      $fname = $row['fname'];
-      $lname = $row['lname'];
-      $department = $row['department'];
-      $gpa = $row['gpa'];
-      $email = $row['email'];
-      $output .= '<div>' .$fname.' '.$lname.'  '.$department.'  '.$gpa. '</div>';
-    }
-  }
-}
-?>
-
 <!DOCTYPE html>
 <html >
 <head>
   <meta charset="UTF-8">
-  <title>Professor Directory</title>
-  <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+  <title>Your schedule</title>
+      <link rel="stylesheet" href="css/style.css">
+      <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
 
-  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css'>
-  <link rel="stylesheet" href="css/style.css">
-
+      <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css'>
+      <link rel="stylesheet" href="css/style.css">
 </head>
-<h1 style = "padding-top:200px"><font color="black"> Professor directory</font></h1>
+<?php include_once('../navbar.html') ?>
 <body>
+<div class="cd-schedule loading">
+	<div class="timeline">
+		<ul>
+      <li><span>08:00</span></li>
+      <li><span>08:30</span></li>
+			<li><span>09:00</span></li>
+			<li><span>09:30</span></li>
+			<li><span>10:00</span></li>
+			<li><span>10:30</span></li>
+			<li><span>11:00</span></li>
+			<li><span>11:30</span></li>
+			<li><span>12:00</span></li>
+			<li><span>12:30</span></li>
+			<li><span>1:00</span></li>
+			<li><span>1:30</span></li>
+			<li><span>2:00</span></li>
+			<li><span>2:30</span></li>
+			<li><span>3:00</span></li>
+			<li><span>3:30</span></li>
+			<li><span>4:00</span></li>
+			<li><span>4:30</span></li>
+			<li><span>5:00</span></li>
+			<li><span>5:30</span></li>
+			<li><span>6:00</span></li>
+      <li><span>6:30</span></li>
+      <li><span>7:00</span></li>
+      <li><span>7:30</span></li>
+      <li><span>8:00</span></li>
+      <li><span>8:30</span></li>
+      <li><span>9:00</span></li>
+      <li><span>9:30</span></li>
+      <li><span>10:00</span></li>
+		</ul>
+	</div> <!-- .timeline -->
 
+	<div class="events">
+		<ul>
+			<li class="events-group">
+				<div class="top-info"><span>Monday</span></div>
 
-<!---       START NAV        -->
+				<ul>
+					<li class="single-event" data-start="08:30" data-end="10:30" data-content="event-abs-circuit" data-event="event-1">
+						<a href="#0">
+							<em class="event-name">COSC 457</em>
+						</a>
+					</li>
 
-</div><nav class="main-menu">
-  <div>
-    <a class="logo" href="">
-    </a>
-  </div>
-  <div class="settings"></div>
-  <div class="scrollbar" id="style-1">
+					<li class="single-event" data-start="11:00" data-end="12:30" data-content="event-rowing-workout" data-event="event-2">
+						<a href="#0">
+							<em class="event-name">COSC 129</em>
+						</a>
+					</li>
 
-    <ul>
+					<li class="single-event" data-start="14:00" data-end="15:15"  data-content="event-yoga-1" data-event="event-3">
+						<a href="#0">
+							<em class="event-name">COSC 134</em>
+						</a>
+					</li>
+				</ul>
+			</li>
 
-      <li>
-        <a href="">
-          <i class="fa fa-home fa-lg"></i>
-          <span class="nav-text">Home</span>
-        </a>
-      </li>
-
-      <li>
-        <a href="">
-          <i class="fa fa-user fa-lg"></i>
-          <span class="nav-text">Login</span>
-        </a>
-      </li>
-
-
-      <li>
-        <a href="">
-          <i class="fa fa-envelope-o fa-lg"></i>
-          <span class="nav-text">Contact</span>
-        </a>
-      </li>
-
-    <li class="darkerli">
-      <a href="/tuitionpage/tuition.php">
-        <i class="fa fa-dollar fa-lg"></i>
-        <span class="nav-text">Account Finances</span>
-      </a>
-    </li>
-
-    <li class="darkerli">
-      <a href="">
-        <i class="fa fa-calendar"></i>
-        <span class="nav-text">Schedule</span>
-      </a>
-    </li>
-
-    <li class="darkerli">
-      <a href="/searchpage1/search.php">
-        <i class="fa fa-graduation-cap fa-lg"></i>
-        <span class="nav-text">Student directory</span>
-      </a>
-    </li>
-
-    <li class="darkerli">
-      <a href="/searchpage2/search.php">
-        <i class="fa fa-male" aria-hidden="true"></i>
-        <span class="nav-text">Professor directory</span>
-      </a>
-    </li>
-
-    <li class="darkerli">
-      <a href="">
-        <i class="fa fa-picture-o fa-lg"></i>
-        <span class="nav-text">Art & Design</span>
-      </a>
-    </li>
-
-    <li class="darkerli">
-      <a href="">
-        <i class="fa fa-align-left fa-lg"></i>
-        <span class="nav-text">Magazines
-        </span>
-      </a>
-    </li>
-
-    <li class="darkerli">
-      <a href="">
-        <i class="fa fa-gamepad fa-lg"></i>
-        <span class="nav-text">Games</span>
-      </a>
-    </li>
-
-    <li class="darkerli">
-      <a href="">
-        <i class="fa fa-glass fa-lg"></i>
-        <span class="nav-text">Life & Style
-        </span>
-      </a>
-    </li>
-
-    <li class="darkerlishadowdown">
-      <a href="">
-        <i class="fa fa-rocket fa-lg"></i>
-        <span class="nav-text">Fun</span>
-      </a>
-    </li>
-
-
-  </ul>
-  <ul class="logout">
-  </ul>
-</nav>
-
-<!---       END NAV        -->
+			<li class="events-group">
+				<div class="top-info"><span>Tuesday</span></div>
 
 
 
+			</li>
 
-  <form action="schedule.php" method="post">
-    <div id="search">
-      <input type="text" name="search" placeholder="Example: 'Leon Bernard'"/>
-      <button type="submit"> <i class="fa fa-search"></i> </button>
-    </div>
-  </form>
-  <div class="note">Hit enter to search</div>
-  <br>
-  <table>
-        <thead>
-          <tr>
-            <th scope="col">First name</th>
-            <th scope="col">Last name</th>
-            <th scope="col">Department</th>
-            <th scope="col">Email</th>
-          </tr>
-        </thead>
+			<li class="events-group">
+				<div class="top-info"><span>Wednesday</span></div>
 
-        <tbody>
-          <tr>
-            <th scope="row"><?php echo $fname ?></th>
-            <td><?php echo $lname  ?></td>
-            <td><?php echo $department ?></td>
-            <td><?php echo $email?></td>
-          </tr>
-        </tbody>
-      </table>
-  <script src="js/index.js"></script>
+
+			</li>
+
+			<li class="events-group">
+				<div class="top-info"><span>Thursday</span></div>
+
+
+			</li>
+
+			<li class="events-group">
+				<div class="top-info"><span>Friday</span></div>
+
+
+			</li>
+		</ul>
+	</div>
+
+	<div class="event-modal">
+		<header class="header">
+			<div class="content">
+				<span class="event-date"></span>
+				<h3 class="event-name"></h3>
+			</div>
+
+			<div class="header-bg"></div>
+		</header>
+
+		<div class="body">
+			<div class="event-info"></div>
+			<div class="body-bg"></div>
+		</div>
+
+		<a href="#0" class="close">Close</a>
+	</div>
+
+	<div class="cover-layer"></div>
+</div> <!-- .cd-schedule -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js'></script>
+
+    <script src="js/index.js"></script>
 
 </body>
 </html>
