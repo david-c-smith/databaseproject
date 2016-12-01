@@ -171,15 +171,8 @@
 
         <li class="events-group">
           <div class="top-info"><span>Friday</span></div>
-
         </li>
-
-
-
       </ul>
-
-
-
     </div>
 
     <div class="event-modal">
