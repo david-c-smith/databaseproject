@@ -13,7 +13,7 @@ table {
   max-width:800px;
 }
 table caption {
-  font-size: 1.5em;
+  font: 60px "Lato", arial, sans-serif;
   margin: .5em 0 .75em;
 }
 table tr {
