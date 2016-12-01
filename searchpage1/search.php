@@ -65,7 +65,7 @@
                   echo '<td>' . $lname. '</td>';
                   echo '<td>' . $major. '</td>';
                   echo '<td>' . $gpa. '</td>';
-                  echo '<td>' . $email. '</td>';
+                  echo '<td>' . '<a href=mailto:'."$email".'>'. $email   . '</td>';
                   echo '</tr>';
                   $output .= '<div>' .$fname.' '.$lname.'  '.$major.'  '.$gpa. '</div>';
                 }

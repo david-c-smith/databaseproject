@@ -62,7 +62,7 @@
                   echo '<td scope="row">' . $fname. '</td>';
                   echo '<td>' . $lname. '</td>';
                   echo '<td>' . $department. '</td>';
-                  echo '<td>' . $email. '</td>';
+                  echo '<td>' . '<a href=mailto:'."$email".'>'. $email   . '</td>';
                   echo '</tr>';
                 }
               }
