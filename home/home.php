@@ -55,7 +55,7 @@
         </div>
         <div class='app-row'>
           <div class='row-label'>Address </div>
-          <div class='row-amount'><?php echo $row4["street_address"] . " " .  " ". ",";?></div>
+          <div class='row-amount'><?php echo $row4["street_address"] .",";?></div>
           <div class='row-amount'><?php echo $row4["city"]. " ". $row4["state"]. " " .$row4["zipcode"];?></div>
         </div>
         <div class='app-row'>
