@@ -12,6 +12,7 @@
 
 <?php include_once('../navbar.html');?>
 
+<h1 style = "padding-top:25px; padding-left:345px;"><font color="black">Your schedule</font></h1>
 
 <body>
   <div class="cd-schedule loading">

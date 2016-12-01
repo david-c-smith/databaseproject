@@ -33,7 +33,7 @@ if($count==1){
 $_SESSION['myusername'] = "myusername";
 $_SESSION['mypassword'] = "mypassword";
 
-header("location:../countdown/countdown.php");
+header("location:../tuitionpage/tuition.php");
 }
 else {
 }

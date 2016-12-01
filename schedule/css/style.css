@@ -51,6 +51,9 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+h1{
+  font: 60px "Lato", arial, sans-serif;
+}
 
 /* style css */
 /* --------------------------------
