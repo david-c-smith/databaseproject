@@ -12,7 +12,7 @@
   $city = $_POST['city'];
   $state = $_POST['state'];
   $country = $_POST['country'];
-  $query = mysql_query("UPDATE ADDRESS SET street_address = $street , zipcode = $zip, country = $country , state = $state, city=$city WHERE student_id='0548314'");
+  $query = mysql_query("UPDATE ADDRESS SET street_address = '$street' , zipcode = '$zip', country = '$country' , state = '$state', city='$city' WHERE student_id='0548314'");
   }
   include_once("./editprofile.php");
 ?>
