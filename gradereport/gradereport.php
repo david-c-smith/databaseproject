@@ -33,13 +33,13 @@
   $dbname = 'rfongh1db';
   $conn = mysql_connect($dbhost, $dbuser, $dbpass);
   mysql_select_db($dbname);
-  $query = mysql_query("SELECT * from COURSE c INNER JOIN GRADE_REPORT gr on c.course_id=gr.course_id WHERE student_id='0548314'");
+  $query = mysql_query("SELECT * from COURSE c INNER JOIN GRADE_REPORT gr on c.course_id=gr.course_id INNER JOIN PROFESSOR p on p.professor_id=c.professor_id WHERE student_id='0548314';");
   while($row = mysql_fetch_array($query)) {
     $course_name = $row['course_name'];
-    $credit_hours = $row['credits_hours'];
+    $credit_hours = $row['credit_hours'];
     $fname = $row['fname'];
     $lname = $row['lname'];
-    $grade = $grade['grade'];
+    $grade = $row['grade'];
     echo '<tr>';
     echo '<td scope="row">' .$course_name. '</td>';
     echo '<td>'.$fname. " ".$lname.'</td>';
