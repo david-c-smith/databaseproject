@@ -7,7 +7,7 @@
   <meta name="keywords" content="What, Would, You, Do, Here" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-  <title>Towson CSI App</title>
+  <title>Edit Information</title>
 
   <!-- Bootstrap -->
   <link href="bootstrap.min.css" rel="stylesheet">
@@ -20,50 +20,45 @@
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
       <!-- edit form column -->
-      <div class="col-md-12 personal-info">
-        <div class="alert alert-info alert-dismissable">
-          <a class="panel-close close" data-dismiss="alert"></a>
-          <i class="fa fa-info-circle"></i>
-          Edit your student information below.
-        </div>
-
-        <form class="form-horizontal" role="form">
+      <?php include_once("../navbar.html") ?>
+      <div class="personal-info">
+        <div class="text-center" style="font-size:40px;padding-bottom:50px">Edit information</div>
+        <form class="form-horizontal" action="edit.php" method="post">
           <div class="form-group">
-            <label class="col-md-1 control-label">First name:</label>
+            <label class="col-md-5 control-label">Street address:</label>
             <div class="col-md-3">
-              <input class="form-control" type="text" value="">
+              <input class="form-control" id="street_address" name="street_address" type="text" value="">
             </div>
           </div>
           <div class="form-group">
-            <label class="col-md-1 control-label">Last name:</label>
+            <label class="col-md-5 control-label">City:</label>
             <div class="col-md-3">
-              <input class="form-control" type="text" value="">
+              <input class="form-control" id="city" name="city" type="text" value="">
             </div>
           </div>
           <div class="form-group">
-            <label class="col-md-1 control-label">Address:</label>
+            <label class="col-md-5 control-label">State:</label>
             <div class="col-md-3">
-              <input class="form-control" type="text" value="">
+              <input class="form-control" id="state" name="state" type="text" value="">
             </div>
           </div>
           <div class="form-group">
-            <label class="col-md-1 control-label">State:</label>
+            <label class="col-md-5 control-label">Country:</label>
             <div class="col-md-3">
-              <input class="form-control" type="text" value="">
+              <input class="form-control" id="country" name="country" type="text" value="">
             </div>
           </div>
           <div class="form-group">
-            <label class="col-md-1 control-label">Zipcode:</label>
+            <label class="col-md-5 control-label">Zipcode:</label>
             <div class="col-md-3">
-              <input class="form-control" type="text" value="">
+              <input class="form-control" id="zipcode" name="zipcode" type="text" value="">
             </div>
           </div>
           </div>
           <div class="form-group">
-            <label class="col-md-1 control-label"></label>
-            <div class="col-md-3">
-              <input type="button" class="btn btn-success pull-right" value="Update profile">
-              <span></span>
+            <label class="col-md-7 control-label"></label>
+            <div class="col-md-1">
+              <input type="submit" name="edit" id="edit" class="btn btn-success pull-right" value="Update information">
             </div>
           </div>
         </form>

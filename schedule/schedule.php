@@ -64,8 +64,9 @@
             $dbname = 'rfongh1db';
             $conn = mysql_connect($dbhost, $dbuser, $dbpass);
             mysql_select_db($dbname);
-            $query = mysql_query("SELECT * FROM SCHED where student_id='0548314' and day_one = 'monday'");
+            $query = mysql_query("SELECT * FROM SCHED sched INNER JOIN SECTION s on sched.section_id=s.section_id INNER JOIN COURSE c on sched.course_id=c.course_id INNER JOIN PROFESSOR p on sched.professor_id=p.professor_id WHERE student_id='0548314'");
             while($row = mysql_fetch_array($query)) {
+            	if($row['day_one'] == 'Monday') {
               $start_time = $row['start_time'];
               $end_time = $row['end_time'];
               $course_name = $row['course_name'];
@@ -82,19 +83,20 @@
             echo '<br>';
             echo '</a>';
             echo '</li>';
+        	}
           }
             ?>
           </ul>
         </li>
 
 
-
         <li class="events-group">
           <div class="top-info"><span>Tuesday</span></div>
           <ul>
           <?php
-          $query = mysql_query("SELECT * FROM SCHED where student_id='0548314' and day_one = 'tuesday'");
+          $query = mysql_query("SELECT * FROM SCHED sched INNER JOIN SECTION s on sched.section_id=s.section_id INNER JOIN COURSE c on sched.course_id=c.course_id INNER JOIN PROFESSOR p on sched.professor_id=p.professor_id WHERE student_id='0548314'");
           while($row = mysql_fetch_array($query)) {
+          	if($row['day_one'] == 'Tuesday') {
             $start_time = $row['start_time'];
             $end_time = $row['end_time'];
             $course_name = $row['course_name'];
@@ -111,6 +113,7 @@
           echo '<br>';
           echo '</a>';
           echo '</li>';
+          	}
           }
           ?>
         </ul>
@@ -120,8 +123,9 @@
           <div class="top-info"><span>Wednesday</span></div>
           <ul>
           <?php
-          $query = mysql_query("SELECT * FROM SCHED where student_id='0548314' and day_two = 'wednesday'");
+          $query = mysql_query("SELECT * FROM SCHED sched INNER JOIN SECTION s on sched.section_id=s.section_id INNER JOIN COURSE c on sched.course_id=c.course_id INNER JOIN PROFESSOR p on sched.professor_id=p.professor_id WHERE student_id='0548314'");
           while($row = mysql_fetch_array($query)) {
+          	if($row['day_two'] == 'Wednesday') {
             $start_time = $row['start_time'];
             $end_time = $row['end_time'];
             $course_name = $row['course_name'];
@@ -138,6 +142,7 @@
           echo '<br>';
           echo '</a>';
           echo '</li>';
+      		}
           }
           ?>
         </ul>
@@ -147,8 +152,9 @@
           <div class="top-info"><span>Thursday</span></div>
           <ul>
           <?php
-          $query = mysql_query("SELECT * FROM SCHED where student_id='0548314' and day_two = 'thursday' or day_one = 'thursday'");
+          $query = mysql_query("SELECT * FROM SCHED sched INNER JOIN SECTION s on sched.section_id=s.section_id INNER JOIN COURSE c on sched.course_id=c.course_id INNER JOIN PROFESSOR p on sched.professor_id=p.professor_id WHERE student_id='0548314'");
           while($row = mysql_fetch_array($query)) {
+          	if($row['day_one'] == 'Thursday' || $row['day_two'] == 'Thursday') {
             $start_time = $row['start_time'];
             $end_time = $row['end_time'];
             $course_name = $row['course_name'];
@@ -165,6 +171,7 @@
           echo '<br>';
           echo '</a>';
           echo '</li>';
+      		}
           }
           ?>
         </ul>
