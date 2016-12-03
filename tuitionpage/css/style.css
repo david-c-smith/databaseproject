@@ -1,6 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:200,300,400,500,700);
 
 #search {
+  font-size:20px;
   color: white;
   -webkit-box-align: center;
   -webkit-align-items: center;
@@ -20,7 +21,7 @@
   padding: 0.5em 0.5em 0.5em 1em;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
-  width: 500px;
+  width: 400px;
 }
 #search:hover, #search:focus {
   color: white;

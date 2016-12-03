@@ -33,7 +33,7 @@
   $dbname = 'rfongh1db';
   $conn = mysql_connect($dbhost, $dbuser, $dbpass);
   mysql_select_db($dbname);
-  $query = mysql_query("SELECT * from GRADE_REPORT,COURSE WHERE student_id='0548314'");
+  $query = mysql_query("SELECT * from COURSE c INNER JOIN GRADE_REPORT gr on c.course_id=gr.course_id WHERE student_id='0548314'");
   while($row = mysql_fetch_array($query)) {
     $course_name = $row['course_name'];
     $credit_hours = $row['credits_hours'];

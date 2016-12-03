@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <script src = "jquery-1.9.1.js"></script>
   <title>Account Finances</title>
+  <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+  <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
   <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
       <link rel="stylesheet" href="css/style.css">
 </head>
@@ -57,9 +60,9 @@
       </div>
       <div class="container">
         <form action="makepayment.php" method="post">
-          <div id="makepayment">
+          <div id="search">
             <input type="text" name="makepayment" placeholder="Enter payment amount"/>
-    		<button class="btn" type="submit"> Make payment</button>
+    		<button class="btn" type="submit"><i class="fa fa-credit-card" style="font-size:40px; color:black; padding-left:80px; margin-bottom:10px; top:4px;" aria-hidden="true"></i></button>
       </form>
     </div>
   </div>

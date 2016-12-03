@@ -8,6 +8,7 @@
   $query1 = "SELECT account_balance FROM TUITION WHERE student_id = '0548314'";
   $result1 = mysql_query($query1);
   $row1 = mysql_fetch_assoc($result1);
+  $balance = $row1['account_balance'];
 
   if(isset($_POST['makepayment'])) {
   $payq = $_POST['makepayment'];
