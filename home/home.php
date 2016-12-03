@@ -38,7 +38,6 @@
   <div class='main-wrapper'>
   <div class='app-wrapper'>
     <div class='app'>
-      <h1 style><font color="black"> Home</font></h1>
       <br>
       <div class='app-body'>
         <div class='app-header'>

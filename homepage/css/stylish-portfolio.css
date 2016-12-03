@@ -54,14 +54,14 @@ h50{
    -webkit-transform: rotate(-1deg);
     border-radius: 0;
     color: #fff;
-    background-color: #ABB7B7;
+    background-color: #00B16A;
 }
 
 .btn-dark:hover,
 .btn-dark:focus,
 .btn-dark:active {
     color: #fff;
-    background-color: #ABB7B7;
+    background-color: #3FC380;
 }
 
 .btn-light {

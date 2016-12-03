@@ -1,4 +1,175 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:200,300,400,500,700);
+
+#search {
+  color: white;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: white;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0.5em 0;
+  padding: 0.5em 0.5em 0.5em 1em;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  width: 500px;
+}
+#search:hover, #search:focus {
+  color: white;
+}
+#search button,
+#search input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: transparent;
+  border: 0;
+  color: black;
+  font: inherit;
+  outline: 0;
+}
+#search button {
+  cursor: pointer;
+  padding: 0 0.25em;
+}
+#search input {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+#search input::-webkit-input-placeholder {
+  color: grey;
+}
+#search input::-moz-placeholder {
+  color: #fff;
+}
+#search input:-ms-input-placeholder {
+  color: #fff;
+}
+#search input::placeholder {
+  color: #fff;
+}
+#search .spinner {
+  -webkit-animation: spinner 1s infinite linear;
+          animation: spinner 1s infinite linear;
+  display: none;
+  padding: 0 0.25em;
+  color: black;
+}
+
+#search.loading button {
+  display: none;
+}
+#search.loading .spinner {
+  display: block;
+}
+
+@-webkit-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.container{
+  width:100%;
+  margin: auto;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.btn{
+  width:400px;
+  height: 50px;
+  border-radius: 100px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: #27ae60;
+  color: #fff;
+  font-weight: 400;
+  font-size: 1.2em;
+  transition: width 400ms ease-in-out, border-radius 400ms ease-in-out;
+
+}
+
+.btn:hover{
+  background-color: #2ecc71;
+}
+
+.btn:active{
+  background-color: #2ecc71;
+  color: #fff;
+  transform: scale(0.98);
+}
+
+.btn.loading{
+  width: 50px;
+  border-radius: 50%;
+  background-color: #e3a136;
+  background-image: url(http://www.metsenergy.com/uploads/loading1.gif);
+  background-size: 110px;
+  background-position:center;
+  background-repeat: no-repeat;
+}
+.btn.finish{
+  pointer-events: none;
+  background-color: #8dcb87;
+}
+.btn.finish:after{
+  content: "";
+  display: block;
+  position: absolute;
+  width: 18px;
+  height: 6px;
+  border-bottom: 3px #fff solid;
+  border-left: 3px #fff solid;
+  z-index: 9999;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  margin: -7px 86px;
+  -webkit-animation: fade 900ms ease forwards;
+  -moz-animation: fade 900ms ease forwards;
+  -o-animation: fade 900ms ease forwards;
+  -ms-animation: fade 900ms ease forwards;
+  animation: fade 900ms ease forwards;
+
+}
+
+@-webkit-keyframes fade {
+  0%   {opacity: 0;}
+  50%  {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+
 .clear-after:after, .app .app-header:after, .app .app-row:after, .app .app-footer:after {
   content: "";
   display: block;
@@ -18,11 +189,14 @@
 
 h1{
 font-size: 45px;
+font-weight: 200;
 }
 
 body {
-  background-color: #90C695;
-  width: 100vw;
+  background: #757F9A; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #757F9A , #D7DDE8); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #757F9A , #D7DDE8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+                      width: 100vw;
   height: 100vh;
   font-family: Roboto;
   text-rendering: auto;

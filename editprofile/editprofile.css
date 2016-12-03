@@ -1,0 +1,128 @@
+@font-face {
+  font-family: SourceSansPro;
+  src: url('fonts/source-sans-pro/SourceSansPro-Regular.otf');
+}
+@font-face {
+  font-family: SourceSansPro;
+  src: url('fonts/source-sans-pro/SourceSansPro-Bold.otf');
+  font-weight: bold;
+}
+@font-face {
+  font-family: SourceSansPro;
+  src: url('fonts/source-sans-pro/SourceSansPro-Italic.otf');
+  font-style: italic;
+}
+@font-face {
+  font-family: SourceSansPro;
+  src: url('fonts/source-sans-pro/SourceSansPro-BoldItalic.otf');
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: SourceSansPro;
+  src: url('fonts/source-sans-pro/SourceSansPro-Light.otf');
+  font-weight: 300;
+}
+@font-face {
+  font-family: SourceSansPro;
+  src: url('fonts/source-sans-pro/SourceSansPro-LightItalic.otf');
+  font-style: italic;
+  font-weight: 300;
+}
+
+html,body {
+	padding-top: 30px;
+  background-image: url('city.jpeg');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  max-width: 100%;
+  color: black;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+}
+
+.navbar-brand {
+  padding: 0px; /* firefox bug fix */
+}
+
+
+.navbar-brand>img {
+  height: 100%;
+  padding: 10px; /* firefox bug fix */
+  width: auto;
+}
+
+
+.special-img
+{
+  position: relative;
+  top: -5px;
+  float: left;
+  left: -5px;
+}
+.profile-image  {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+/*
+* Navbar
+*/
+
+.navbar-login
+{
+  width: 305px;
+  padding: 10px;
+  padding-bottom: 0px;
+}
+
+.navbar-login-session
+{
+  padding: 10px;
+  padding-bottom: 0px;
+  padding-top: 0px;
+
+}
+.navbar-footer
+{
+  background-color:#DDD;
+}
+.navbar-footer-content {
+  padding:15px 15px 15px 15px;
+}
+
+.dropdown-menu {
+  padding: 0px;
+  overflow: hidden;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0; // remove the gap so it doesn't close
+}
+
+.show {display:block;}
+
+.icon-size
+{
+  font-size: 87px;
+}
+
+img {
+  display: inline-block;
+  height: auto;
+  max-width: 100%;
+}
+
+.icon-size
+{
+  font-size: 87px;
+}
+
+.dropdown-menu li>a:hover{
+	 color:black;
+ }
+
+.dropdown-menu li>a{color:gray }

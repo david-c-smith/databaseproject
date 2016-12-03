@@ -2,6 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
+  <script src = "jquery-1.9.1.js"></script>
   <title>Account Finances</title>
   <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
       <link rel="stylesheet" href="css/style.css">
@@ -54,9 +55,16 @@
           <div class='row-amount'><?php echo $row3["(account_balance - pending_aid)"];?></div>
         </div>
       </div>
+      <div class="container">
+        <form action="makepayment.php" method="post">
+          <div id="makepayment">
+            <input type="text" name="makepayment" placeholder="Enter payment amount"/>
+    		<button class="btn" type="submit"> Make payment</button>
+      </form>
     </div>
   </div>
 </div>
+
   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
     <script src="js/index.js"></script>

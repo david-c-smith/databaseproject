@@ -12,7 +12,7 @@
 
 <?php include_once('../navbar.html');?>
 
-<h1 style = "padding-top:25px; padding-left:345px;"><font color="black">Your schedule</font></h1>
+<h1 style = "padding-top:25px; padding-left:500px;"><font color="black">Your schedule</font></h1>
 
 <body>
   <div class="cd-schedule loading">
@@ -144,7 +144,7 @@
         </li>
 
         <li class="events-group">
-          <div class="top-info"><span>Tuesday</span></div>
+          <div class="top-info"><span>Thursday</span></div>
           <ul>
           <?php
           $query = mysql_query("SELECT * FROM SCHED where student_id='0548314' and day_two = 'thursday' or day_one = 'thursday'");

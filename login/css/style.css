@@ -10,6 +10,16 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+#gradient {
+  padding-top: 150px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #836997;
+}
+
 .login-card {
   padding: 40px;
   width: 274px;

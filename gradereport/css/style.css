@@ -5,11 +5,13 @@ body {
 }
 table {
   margin-top:40px;
-  margin-left:120px;
+  position:center;
+  margin-left:270px;
   border: 1px solid #ccc;
   border-collapse: collapse;
   table-layout: fixed;
   width: 100%;
+  font-size: 9px;
   max-width:800px;
 }
 table caption {
@@ -24,8 +26,8 @@ table tr:nth-child(even) {
   background: white;
 }
 table tr:nth-child(odd) {
-  background: #2c3e50;
-  color: white;
+  background: #C5EFF7;
+  color: black;
 }
 table th,
 table td {
