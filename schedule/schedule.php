@@ -67,6 +67,7 @@
             $query = mysql_query("SELECT * FROM SCHED sched INNER JOIN SECTION s on sched.section_id=s.section_id INNER JOIN COURSE c on sched.course_id=c.course_id INNER JOIN PROFESSOR p on sched.professor_id=p.professor_id WHERE student_id='0548314'");
             while($row = mysql_fetch_array($query)) {
             	if($row['day_one'] == 'Monday') {
+              $room = $row['room'];
               $start_time = $row['start_time'];
               $end_time = $row['end_time'];
               $course_name = $row['course_name'];
@@ -77,11 +78,10 @@
               $section = $row['section_id'];
             echo '<li class="single-event" data-start="'.$start_time.'" data-end="'.$end_time.'" data-content="" data-event="event-1">';
             echo '<a href="#0">';
+            echo '<em class="event-name" style="font-size:10px">'.$room.'</em>';
             echo '<em class="event-name">'.$department . " " .$course_number. "." .$section.'</em>';
-            echo '<br>';
             echo 'Instructor';
             echo '<em class="event-name">'.$fname." ".$lname.'</em>';
-            echo '<br>';
             echo '</a>';
             echo '</li>';
         	}
@@ -98,6 +98,7 @@
           $query = mysql_query("SELECT * FROM SCHED sched INNER JOIN SECTION s on sched.section_id=s.section_id INNER JOIN COURSE c on sched.course_id=c.course_id INNER JOIN PROFESSOR p on sched.professor_id=p.professor_id WHERE student_id='0548314'");
           while($row = mysql_fetch_array($query)) {
           	if($row['day_one'] == 'Tuesday') {
+            $room = $row['room'];
             $start_time = $row['start_time'];
             $end_time = $row['end_time'];
             $course_name = $row['course_name'];
@@ -108,11 +109,10 @@
             $section = $row['section_id'];
           echo '<li class="single-event" data-start="'.$start_time.'" data-end="'.$end_time.'" data-content="" data-event="event-1">';
           echo '<a href="#0">';
+          echo '<em class="event-name" style="font-size:10px">'.$room.'</em>';
           echo '<em class="event-name">'.$department . " " .$course_number. "." .$section.'</em>';
-          echo '<br>';
           echo 'Instructor';
           echo '<em class="event-name">'.$fname." ".$lname.'</em>';
-          echo '<br>';
           echo '</a>';
           echo '</li>';
           	}
@@ -128,6 +128,7 @@
           $query = mysql_query("SELECT * FROM SCHED sched INNER JOIN SECTION s on sched.section_id=s.section_id INNER JOIN COURSE c on sched.course_id=c.course_id INNER JOIN PROFESSOR p on sched.professor_id=p.professor_id WHERE student_id='0548314'");
           while($row = mysql_fetch_array($query)) {
           	if($row['day_two'] == 'Wednesday') {
+            $room = $row['room'];
             $start_time = $row['start_time'];
             $end_time = $row['end_time'];
             $course_name = $row['course_name'];
@@ -138,11 +139,10 @@
             $section = $row['section_id'];
           echo '<li class="single-event" data-start="'.$start_time.'" data-end="'.$end_time.'" data-content="" data-event="event-1">';
           echo '<a href="#0">';
+          echo '<em class="event-name" style="font-size:10px">'.$room.'</em>';
           echo '<em class="event-name">'.$department . " " .$course_number. "." .$section.'</em>';
-          echo '<br>';
           echo 'Instructor';
           echo '<em class="event-name">'.$fname." ".$lname.'</em>';
-          echo '<br>';
           echo '</a>';
           echo '</li>';
       		}
@@ -158,6 +158,7 @@
           $query = mysql_query("SELECT * FROM SCHED sched INNER JOIN SECTION s on sched.section_id=s.section_id INNER JOIN COURSE c on sched.course_id=c.course_id INNER JOIN PROFESSOR p on sched.professor_id=p.professor_id WHERE student_id='0548314'");
           while($row = mysql_fetch_array($query)) {
           	if($row['day_one'] == 'Thursday' || $row['day_two'] == 'Thursday') {
+            $room = $row['room'];
             $start_time = $row['start_time'];
             $end_time = $row['end_time'];
             $course_name = $row['course_name'];
@@ -168,11 +169,10 @@
             $section = $row['section_id'];
           echo '<li class="single-event" data-start="'.$start_time.'" data-end="'.$end_time.'" data-content="" data-event="event-1">';
           echo '<a href="#0">';
+          echo '<em class="event-name" style="font-size:10px">'.$room.'</em>';
           echo '<em class="event-name">'.$department . " " .$course_number. "." .$section.'</em>';
-          echo '<br>';
           echo 'Instructor';
           echo '<em class="event-name">'.$fname." ".$lname.'</em>';
-          echo '<br>';
           echo '</a>';
           echo '</li>';
       		}
