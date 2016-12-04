@@ -14,7 +14,7 @@
 </head>
 
 <body>
-  <table>
+  <table style="margin:auto">
   <caption>Grade report</caption>
   <thead>
     <tr>
@@ -33,7 +33,7 @@
   $dbname = 'rfongh1db';
   $conn = mysql_connect($dbhost, $dbuser, $dbpass);
   mysql_select_db($dbname);
-  $query = mysql_query("SELECT * from COURSE c INNER JOIN GRADE_REPORT gr on c.course_id=gr.course_id INNER JOIN PROFESSOR p on p.professor_id=c.professor_id WHERE student_id='0548314';");
+  $query = mysql_query("SELECT * FROM GRADE_REPORT gr INNER JOIN SECTION s on gr.section_id=s.section_id INNER JOIN PROFESSOR p on gr.professor_id=p.professor_id INNER JOIN COURSE c on gr.course_id=c.course_id WHERE student_id='0548314';");
   while($row = mysql_fetch_array($query)) {
     $course_name = $row['course_name'];
     $credit_hours = $row['credit_hours'];
@@ -41,7 +41,7 @@
     $lname = $row['lname'];
     $grade = $row['grade'];
     echo '<tr>';
-    echo '<td scope="row">' .$course_name. '</td>';
+    echo '<td scope="row" class="overflow-visible" style="padding-right:60px">' .$course_name. '</td>';
     echo '<td>'.$fname. " ".$lname.'</td>';
     echo '<td>'.$credit_hours.'</td>';
     echo '<td>'.$grade.'</td>';

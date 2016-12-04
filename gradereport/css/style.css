@@ -10,9 +10,8 @@ table {
   border: 1px solid #ccc;
   border-collapse: collapse;
   table-layout: fixed;
-  width: 100%;
-  font-size: 9px;
-  max-width:800px;
+  width: 1000px;
+  font-size: 20px;
 }
 table caption {
   font: 60px "Lato", arial, sans-serif;
@@ -33,7 +32,13 @@ table th,
 table td {
   padding: .625em;
   text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  border: .5px solid grey;
+  width: 80px
 }
+
 table th {
   background: #999;
   color: #fff;
@@ -41,10 +46,13 @@ table th {
   letter-spacing: .1em;
   text-transform: uppercase;
 }
+.overflow-visible {
+    white-space: initial;
+}
 table td {
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
+  text-overflow: visible;
 }
 
 @import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
@@ -227,13 +235,10 @@ bottom:0;
 }
 
 .no-touch .scrollable.hover {
-overflow-y:hidden;
 
 }
 
 .no-touch .scrollable.hover:hover {
-overflow-y:auto;
-overflow:visible;
 
 }
 
