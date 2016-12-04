@@ -11,7 +11,7 @@
 </head>
 
 <body>
-  <h1 style = "padding-top:25px"><font color="black">Student directory</font></h1>
+  <h1 style = "padding-top:25px; padding-right:30px;"><font color="black"><i class="fa fa-graduation-cap fa-lg" style="font-size:100px"></i>Student directory</font></h1>
 
 <?php include_once('../navbar.html') ?>
 

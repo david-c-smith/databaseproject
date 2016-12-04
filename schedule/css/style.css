@@ -54,6 +54,7 @@ table {
 }
 h1{
   font: 60px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight:200;
 }
 
 /* style css */

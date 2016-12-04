@@ -28,7 +28,7 @@
     <div class="panel panel-default"style="background:#ecf0f1">
        <div class="panel-body">
       <div class="personal-info">
-        <div class="text-center" style="font-size:40px;padding-bottom:50px">Edit information</div>
+        <div class="text-center" style="font-size:40px;padding-bottom:30px"><font color="black"><i class="fa fa-info-circle fa-lg" style="font-size:50px; padding-right:60px;vertical-align:8px;"></i>Edit information</font></div>
         <form class="form-horizontal" action="edit.php" method="post">
           <div class="form-group">
             <label class="col-md-5 control-label">Street address:</label>

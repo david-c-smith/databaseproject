@@ -15,7 +15,8 @@
 
 <body>
   <table style="margin:auto">
-  <caption>Grade report</caption>
+  <caption><font color="black"><i class="fa fa-check fa-lg" style="font-size:100px;padding-right:20px;"></i>Grade report</font></h1>
+</caption>
   <thead>
     <tr>
       <th scope="col">Course name</th>

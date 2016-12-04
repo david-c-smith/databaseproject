@@ -38,7 +38,8 @@
   <div class='main-wrapper'>
   <div class='app-wrapper'>
     <div class='app'>
-      <h1 style><font color="black"> Account finances</font></h1>
+      <h1 style="font-size:40px;"><font color="black">
+        <i class="fa fa-usd" style="font-size:40px;padding-right:10px;vertical-align:middle"></i>Account Finances</font></h1>
       <br>
       <div class='app-body'>
         <div class='app-header'>
