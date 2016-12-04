@@ -71,7 +71,7 @@
               <div class='row-amount'><?php echo $row3["gpa"];?></div>
             </div>
             <div class='app-row'>
-              <div class='row-label'>Enrollment date</div>
+              <div class='row-label'>Enrollment Date</div>
               <div class='row-amount'><?php echo $enroll_date;?></div>
             </div>
           </div>
