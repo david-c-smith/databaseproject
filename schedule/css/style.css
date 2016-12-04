@@ -27,6 +27,7 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
@@ -52,7 +53,7 @@ table {
 	border-spacing: 0;
 }
 h1{
-  font: 60px "Lato", arial, sans-serif;
+  font: 60px "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 /* style css */
@@ -66,17 +67,19 @@ Primary style
 }
 
 html {
+  font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 60.5%;
 }
 
 body {
+  font-family:"Helvetica Neue", Helvetica, Arial, sans-serif!important;
   font-size: 1.6rem;
-  font-family: "Source Sans Pro", sans-serif;
   color: #222222;
   background-color: white;
 }
 
 a {
+  font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #A2B9B2;
   text-decoration: none;
 }
@@ -184,8 +187,6 @@ Main Components
 .cd-schedule .events .top-info > span {
   display: inline-block;
   line-height: 1.2;
-  margin-bottom: 10px;
-  font-weight: bold;
 }
 
 .cd-schedule .events .events-group > ul {
@@ -333,7 +334,6 @@ Main Components
 .cd-schedule .event-date {
   display: block;
   color: white;
-  font-weight: bold;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

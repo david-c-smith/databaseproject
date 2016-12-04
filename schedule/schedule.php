@@ -74,9 +74,10 @@
               $course_number = $row['course_number'];
               $fname = $row['fname'];
               $lname = $row['lname'];
+              $section = $row['section_id'];
             echo '<li class="single-event" data-start="'.$start_time.'" data-end="'.$end_time.'" data-content="" data-event="event-1">';
             echo '<a href="#0">';
-            echo '<em class="event-name">'.$department . " " .$course_number.'</em>';
+            echo '<em class="event-name">'.$department . " " .$course_number. "." .$section.'</em>';
             echo '<br>';
             echo 'Instructor';
             echo '<em class="event-name">'.$fname." ".$lname.'</em>';
@@ -104,9 +105,10 @@
             $course_number = $row['course_number'];
             $fname = $row['fname'];
             $lname = $row['lname'];
+            $section = $row['section_id'];
           echo '<li class="single-event" data-start="'.$start_time.'" data-end="'.$end_time.'" data-content="" data-event="event-1">';
           echo '<a href="#0">';
-          echo '<em class="event-name">'.$department . " " .$course_number.'</em>';
+          echo '<em class="event-name">'.$department . " " .$course_number. "." .$section.'</em>';
           echo '<br>';
           echo 'Instructor';
           echo '<em class="event-name">'.$fname." ".$lname.'</em>';
@@ -133,9 +135,10 @@
             $course_number = $row['course_number'];
             $fname = $row['fname'];
             $lname = $row['lname'];
+            $section = $row['section_id'];
           echo '<li class="single-event" data-start="'.$start_time.'" data-end="'.$end_time.'" data-content="" data-event="event-1">';
           echo '<a href="#0">';
-          echo '<em class="event-name">'.$department . " " .$course_number.'</em>';
+          echo '<em class="event-name">'.$department . " " .$course_number. "." .$section.'</em>';
           echo '<br>';
           echo 'Instructor';
           echo '<em class="event-name">'.$fname." ".$lname.'</em>';
@@ -162,9 +165,10 @@
             $course_number = $row['course_number'];
             $fname = $row['fname'];
             $lname = $row['lname'];
+            $section = $row['section_id'];
           echo '<li class="single-event" data-start="'.$start_time.'" data-end="'.$end_time.'" data-content="" data-event="event-1">';
           echo '<a href="#0">';
-          echo '<em class="event-name">'.$department . " " .$course_number.'</em>';
+          echo '<em class="event-name">'.$department . " " .$course_number. "." .$section.'</em>';
           echo '<br>';
           echo 'Instructor';
           echo '<em class="event-name">'.$fname." ".$lname.'</em>';

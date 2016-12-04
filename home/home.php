@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Home</title>
   <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
-      <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -41,86 +41,76 @@
     $fname = $row['fname'];
     $lname = $row['lname'];
     $email = $row['email'];
+    $office_hours = $row['office_hours'];
   }
   ?>
-
   <div class='main-wrapper'>
-  <div class='app-wrapper'>
-    <div class='app'>
-      <br>
-      <div class='app-body'>
-        <div class='app-header'>
-          <div class='header-label'><b>Student Information<b></div>
-          <div class='header-logo'><img src='https://mdsoar.org/themes/TowsonUniversity//images/community_logo.png' /></div>
+    <div class='app-wrapper'>
+      <div class='app'>
+        <br>
+        <div class='app-body'>
+          <div class='app-header'>
+            <div class='header-label'><b>Student Information<b></div>
+              <div class='header-logo'><img src='https://mdsoar.org/themes/TowsonUniversity//images/community_logo.png' /></div>
+            </div>
+            <div class='app-row'>
+              <div class='row-label'>Student Name</div>
+              <div class='row-amount'><?php echo $row1["fname"]. " ". $row1["lname"];?></div>
+            </div>
+            <div class='app-row'>
+              <div class='row-label'>Major</div>
+              <div class='row-amount'><?php echo $row2["major"];?></div>
+            </div>
+            <div class='app-row'>
+              <div class='row-label'>Address </div>
+              <div class='row-amount'><?php echo $row4["street_address"] .",";?></div>
+              <div class='row-amount'><?php echo $row4["city"]. " ". $row4["state"]. " " .$row4["zipcode"];?></div>
+            </div>
+            <div class='app-row'>
+              <div class='row-label'>GPA</div>
+              <div class='row-amount'><?php echo $row3["gpa"];?></div>
+            </div>
+            <div class='app-row'>
+              <div class='row-label'>Enrollment date</div>
+              <div class='row-amount'><?php echo $enroll_date;?></div>
+            </div>
+          </div>
         </div>
-        <div class='app-row'>
-          <div class='row-label'>Student Name</div>
-          <div class='row-amount'><?php echo $row1["fname"]. " ". $row1["lname"];?></div>
-        </div>
-        <div class='app-row'>
-          <div class='row-label'>Major</div>
-          <div class='row-amount'><?php echo $row2["major"];?></div>
-        </div>
-        <div class='app-row'>
-          <div class='row-label'>Address </div>
-          <div class='row-amount'><?php echo $row4["street_address"] .",";?></div>
-          <div class='row-amount'><?php echo $row4["city"]. " ". $row4["state"]. " " .$row4["zipcode"];?></div>
-        </div>
-        <div class='app-row'>
-          <div class='row-label'>GPA</div>
-          <div class='row-amount'><?php echo $row3["gpa"];?></div>
-        </div>
-        <div class='app-row'>
-          <div class='row-label'>Enrollment date</div>
-          <div class='row-amount'><?php echo $enroll_date;?></div>
-        </div>
-        <div class='app-header'>
-          <div class='header-label'><b>Advisor Information<b></div>
-        </div>
-        <div class='app-row'>
-          <div class='row-label'>Advisor Name</div>
-          <div class='row-amount'><?php echo $fname. " ". $lname;?></div>
-        </div>
-        <div class='app-row'>
-          <div class='row-label'>Department</div>
-          <div class='row-amount'><?php echo $department;?></div>
-        </div>
-        <div class='app-row'>
-          <div class='row-label'>Email</div>
-          <div class='row-amount'><?php echo '<a href=mailto:'."$email".'>'. $email?></div>
+      </div>
+
+    <div class='main-wrapper' style="padding-right:30px">
+    <div class='app-wrapper'>
+      <div class='app'>
+        <br>
+        <div class='app-body'>
+          <div class='app-header'>
+            <div class='header-label'><b>Advisor Information<b></div>
+              <div class='header-logo'><img src='https://freeiconshop.com/files/edd/info-circle-outline.png' /></div>
+            </div>
+            <div class='app-row'>
+              <div class='row-label'>Advisor Name</div>
+              <div class='row-amount'><?php echo $fname. " ". $lname;?></div>
+            </div>
+            <div class='app-row'>
+              <div class='row-label'>Department</div>
+              <div class='row-amount'><?php echo $department;?></div>
+            </div>
+            <div class='app-row'>
+              <div class='row-label'>Office Hours</div>
+              <div class='row-amount' style="font-size:17px;padding-top:5px"><?php echo $office_hours?></div>
+              </div>
+            <div class='app-row'>
+              <div class='row-label'>Email</div>
+              <div class='row-amount'><?php echo '<a href=mailto:'."$email".'>'. $email?></div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
+      <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
-<div class='main-wrapper'>
-<div class='app-wrapper'>
-  <div class='app'>
-    <br>
-      <div class='app-header'>
-        <div class='header-label'><b>Advisor Information<b></div>
-      </div>
-      <div class='app-row'>
-        <div class='row-label'>Advisor Name</div>
-        <div class='row-amount'><?php echo $fname. " ". $lname;?></div>
-      </div>
-      <div class='app-row'>
-        <div class='row-label'>Department</div>
-        <div class='row-amount'><?php echo $department;?></div>
-      </div>
-      <div class='app-row'>
-        <div class='row-label'>Email</div>
-        <div class='row-amount'><?php echo '<a href=mailto:'."$email".'>'. $email?></div>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
+      <script src="js/index.js"></script>
 
-  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-
-    <script src="js/index.js"></script>
-
-</body>
-</html>
+    </body>
+    </html>
