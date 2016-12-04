@@ -48,7 +48,7 @@
         if(isset($_POST['search'])) {
           $searchq = $_POST['search'];
           $searchq = preg_replace("#[^0-9a-z]#i"," ",$searchq);
-          $query = mysql_query("SELECT * FROM COURSE WHERE course_name LIKE '%$searchq%'");
+          $query = mysql_query("SELECT * FROM COURSE WHERE course_name LIKE '%$searchq%' or department LIKE '%$searchq%' or credit_hours LIKE '%$searchq%' or course_number LIKE '%$searchq%'");
           $count = mysql_num_rows($query);
           if($count == 0) {
             $output = "No search results";
